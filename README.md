@@ -1,4 +1,5 @@
 # devops-basic
+- [ ] DevOps là gì? Văn hóa? Hay một chức danh công việc?...
 - [ ] Tạo môi  trường thực hành sử dụng sshd với docker
   + [x] Ubuntu server, sử dụng docker image: [sun7pro/ssh-test-server:ubuntu18.04](https://hub.docker.com/r/sun7pro/ssh-test-server)
   + [ ] CentOS server
