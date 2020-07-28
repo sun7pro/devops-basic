@@ -1,22 +1,22 @@
 # devops-basic
-- [ ] DevOps là gì? Văn hóa? Hay một chức danh công việc?...
+- [ ] [DevOps là gì? Văn hóa? Hay một chức danh công việc?...](./docs/intro/README.md)
 - [ ] Tạo môi  trường thực hành sử dụng sshd với docker
-  + [x] Ubuntu server, sử dụng docker image: [sun7pro/ssh-test-server:ubuntu18.04](https://hub.docker.com/r/sun7pro/ssh-test-server)
+  + [x] Ubuntu server, sử dụng docker image: [sun7pro/ssh-test-server:ubuntu18.04](https://github.com/sun7pro/docker-library/tree/master/ssh-test-server)
   + [ ] CentOS server
   + [ ] AmazonLinux server
-- [ ] SSH connect guide
-- [ ] Terminal, process management
-- [ ] Hướng dẫn cài đặt môi trường cơ bản cho test server: php fpm, nginx
-- [ ] Deloy với rocketeer và deployer hoặc git
-- [ ] Áp dụng CI, CW notification
+- [ ] [SSH connect guide](./docs/ssh/README.md)
+- [ ] [Linux, process management](./docs/linux/README.md)
+- [ ] Hướng dẫn cài đặt môi trường cơ bản cho test server: [lamp stack](./docs/lamp/README.md), [lemp stack](./docs/lemp/README.md)
+- [ ] [Deloy với rocketeer và deployer hoặc git](./docs/cicd/README.md)
+- [ ] [Áp dụng CI, CW notification](./docs/cicd/README.md)
   + [ ] CircleCI
   + [ ] Github Action
   + [ ] Sun*CI
   + [ ] Jenkins
   + [ ] Gitlab CI 
-- [ ] Tìm hiểu và áp dụng Ansible cho test server
-- [ ] Tìm hiểu và áp dụng Terraform for AWS, GCP, Azure
-- [ ] Tìm hiểu về monitoring
+- [ ] [Tìm hiểu và áp dụng Ansible cho test server](./docs/ansible/README.md)
+- [ ] [Tìm hiểu và áp dụng Terraform for AWS, GCP, Azure](./docs/terraform/README.md)
+- [ ] [Tìm hiểu về monitoring](./docs/monitoring/README.md)
   + [ ] Prometheus
   + [ ] Grafana
   + [ ] Zabbix
