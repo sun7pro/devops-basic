@@ -46,6 +46,7 @@ Có vẻ không khó khăn lắm nhỉ. Chỉ với hơn chục dòng lệnh mà
 
 ## Xây dựng shell script
 
+Chúng ta sẽ xây dựng file `deploy.sh`, file chứa các lệnh để install các dependency, build ứng dụng.
 ```bash
 #!/bin/bash
 # Name: deploy.sh
@@ -73,8 +74,19 @@ php artisan migrate
 php artisan optimize
 ```
 
+Cấp quyền cho thư file này để có thể thực thi:
+```bash
+chmod +x deploy.sh
+```
+
+Tiến hành deploy nào:
+```bash
+ssh -a user@host 'bash -s' < /path/to/deploy.sh
+```
+
 ## Tạo alias
 
+Bạn có thể tạo alias cho từng project để gõ lệnh 1 cách nhanh chóng.
 ```bash
 sudo vi ~/.zshrc
 ```
@@ -82,7 +94,7 @@ sudo vi ~/.zshrc
 Thêm nội dung vào file này
 
 ```bash
-alias deploy-demo="bash /home/minhnv/Desktop/devops/deploy.sh"
+alias deploy-demo="ssh -a user@host 'bash -s' < /path/to/deploy.sh"
 ```
 
 Như vậy chúng ta có thể deploy ứng dụng với lệnh đơn giản trên chính máy của bạn
@@ -91,6 +103,7 @@ Như vậy chúng ta có thể deploy ứng dụng với lệnh đơn giản tr�
 deploy-demo
 ```
 
+Bạn có thể xem thêm cách tạo `alias` với `bash` hoặc `zsh` tại [đây](https://viblo.asia/p/back-to-basic-linux-command-line-part-2-m68Z0MXNlkG#_tao-alias-7)
 ## Tùy chọn cho các tham số
 
 Trong ví dụ trên các tham số như đường dẫn `thư mục deploy`, `tên nhánh` và `username` và `hostname` đang được cố định trong file. Bạn hoàn toàn có thể thay đổi tùy biến bằng cách để cho người dùng nhập tùy biến.
@@ -129,10 +142,10 @@ read branch
 
 printf "${GREEN}Wait a second, deployment is processing ......${NC}\n"
 
-ssh -a ${username}@${hostname} "bash -s $path $branch" < /home/minhnv/Desktop/devops/command.sh
+ssh -a ${username}@${hostname} "bash -s $path $branch" < /path/to/deploy.sh
 ```
 
-Và file `command.sh` sẽ nhận các tham số như sau:
+Và file `deploy.sh` sẽ nhận các tham số như sau:
 
 ```bash
 #!/bin/bash
@@ -144,10 +157,15 @@ set -e # Stopr script if one of the commands failed
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
+print_info () {
+    msg=$@
+    printf "${GREEN}${msg}${NC}\n"
+}
+
 # $1: Source code patch
 # $2: Source code branch
 
-printf "${GREEN}1. Checkout code${NC}\n"
+print_info "1. Checkout code"
 
 cd $1
 
@@ -155,30 +173,30 @@ git checkout $2
 
 git pull origin $2
 
-printf "${GREEN}2. Build the source code ${NC}\n"
-printf "${GREEN}Composer install ......${NC}\n"
+print_info "2. Build the source code"
+print_info "Composer install"
 # Build ứng dụng
 composer install
 
 # Build JS, CSS Assets
 
-printf "${GREEN}3. Webpack building ......${NC}\n"
+print_info "3. Webpack building"
 ## Install js, css module
 npm install
 
-## Run all Mix tasks...
-npm run dev
+## Run all Mix tasks and minify output...
+npm run production
 
 # Migrate the project
-printf "${GREEN}4. Migrate database ......${NC}\n"
+print_info "4. Migrate database"
 php artisan migrate
-printf "${GREEN}Migrate database successfully${NC}\n"
+print_info "Migrate database successfully"
 
 # Caching, optimize
-printf "${GREEN}5. Caching, optimize ......${NC}\n"
+print_info "5. Caching, optimize"
 php artisan optimize
 
-printf "${GREEN}The deployment is successfully!${NC}\n"
+print_info "The deployment was successful!"
 ```
 
 Như vậy chúng ta vừa hoàn thành 1 chương trình shell script đơn giản thực hiện deploy code.

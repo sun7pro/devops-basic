@@ -20,7 +20,7 @@ Trước tiên bạn cần có 1 hosting hoặc máy chủ cá nhân ảo, tiế
 
 Hiện có rất nhiều các nhà cung cấp dịch vụ VPS như các cloud, có thể kể đến như Amazon với dịch vụ EC2, Google Cloud với Cloud Computing Services đều là các dịch vụ tốt phục vụ công việc của bạn.
 
-Khi đã có một máy chủ cloud cho riêng mình, bạn cần phải thực hiện kết nối remote vào máy chủ này. Giao thức chủ yếu được sử dụng là ssh.
+Khi đã có một máy chủ cloud cho riêng mình, bạn cần phải thực hiện kết nối remote vào máy chủ này. Giao thức chủ yếu được sử dụng là ssh. Chi tiết hướng dẫn kết nối bạn có thể xem chi tiết tại [đây](../ssh/README.md)
 
 Kết nối với một remote server với `user` là `username`:
 
