@@ -1,4 +1,4 @@
-Trong phần tổng quan, tất cả các lệnh từ việc remote vào server cho đến cập nhật mã nguồn và build ứng dụng đều cần thực hiện thủ công. Trong phần tiếp theo, chúng ta hãy sử dụng shell script để thực hiện tất cả các công việc đó chỉ bằng 1 lệnh nhé :D.
+[Trong phần tổng quan](overview.md), tất cả các lệnh từ việc remote vào server cho đến cập nhật mã nguồn và build ứng dụng đều cần thực hiện thủ công. Trong phần tiếp theo, chúng ta hãy sử dụng shell script để thực hiện tất cả các công việc đó chỉ bằng 1 lệnh nhé :D.
 
 # Shell script
 
@@ -63,8 +63,6 @@ composer install
 # Build JS, CSS Assets
 ## Install javascript, css module
 npm install
-## Run all Mix tasks...
-npm run dev
 ## Run all Mix tasks and minify output...
 npm run production
 

@@ -8,8 +8,8 @@
 - [ ] [Linux, process management](./docs/linux/README.md)
 - [ ] Hướng dẫn cài đặt môi trường cơ bản cho test server: [lamp stack](./docs/lamp/README.md), [lemp stack](./docs/lemp/README.md)
 - [ ] Deploy tools
-  + [x] Deployment overview: [read](https://github.com/sun7pro/devops-basic/blob/DOCS-overview-deploy-and-shell-script-deploy/docs/deploy/overview.md)
-  + [x] Shell script: [read](https://github.com/sun7pro/devops-basic/blob/DOCS-overview-deploy-and-shell-script-deploy/docs/deploy/shell-script.md)
+  + [x] [Deployment overview](./docs/cicd/overview.md)
+  + [x] [Shell script](./docs/cicd/shell-script.md)
   + [ ] PHP appilcation
   + [ ] NodeJs application
   + [ ] <strong>[Tool]</strong>: Rocketeer

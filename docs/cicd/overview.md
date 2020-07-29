@@ -57,8 +57,6 @@ composer install
 
 ## Install javascript, css module
 npm install
-## Run all Mix tasks...
-npm run dev
 ## Run all Mix tasks and minify output...
 npm run production
 
