@@ -7,7 +7,13 @@
 - [ ] [SSH connect guide](./docs/ssh/README.md)
 - [ ] [Linux, process management](./docs/linux/README.md)
 - [ ] Hướng dẫn cài đặt môi trường cơ bản cho test server: [lamp stack](./docs/lamp/README.md), [lemp stack](./docs/lemp/README.md)
-- [ ] [Deloy với rocketeer và deployer hoặc git](./docs/cicd/README.md)
+- [ ] Deploy tools
+  + [x] [Deployment overview](./docs/cicd/overview.md)
+  + [x] [Shell script](./docs/cicd/shell-script.md)
+  + [ ] PHP appilcation
+  + [ ] NodeJs application
+  + [ ] <strong>[Tool]</strong>: Rocketeer
+  + [ ] <strong>[Tool]</strong>: Deployer
 - [ ] [Áp dụng CI, CW notification](./docs/cicd/README.md)
   + [ ] CircleCI
   + [ ] Github Action
