@@ -4,7 +4,7 @@
   + [x] Ubuntu server, [hướng dẫn thực hành](./docs/ssh/ubuntu-test-server.md)
   + [ ] CentOS server
   + [ ] AmazonLinux server
-- [ ] [SSH connect guide](./docs/ssh/README.md)
+- [x] [SSH connect guide](./docs/ssh/README.md)
 - [ ] [Linux, process management](./docs/linux/README.md)
 - [ ] Hướng dẫn cài đặt môi trường cơ bản cho test server: [lamp stack](./docs/lamp/README.md), [lemp stack](./docs/lemp/README.md)
 - [ ] Deploy tools
