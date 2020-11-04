@@ -15,7 +15,7 @@
   + [ ] <strong>[Tool]</strong>: Rocketeer
   + [ ] <strong>[Tool]</strong>: Deployer
 - [ ] [Áp dụng CI, CW notification](./docs/cicd/README.md)
-  + [ ] CircleCI
+  + [x] [CircleCI](./docs/cicd/circle-ci/README.md)
   + [ ] Github Action
   + [ ] Sun*CI
   + [ ] Jenkins
