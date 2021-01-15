@@ -17,7 +17,7 @@
 - [ ] [Áp dụng CI, CW notification](./docs/cicd/README.md)
   + [x] [CircleCI](./docs/cicd/circle-ci/README.md)
   + [ ] Github Action
-  + [ ] Sun*CI
+  + [x] [Sun*CI](./docs/cicd/sun-ci/README.md)
   + [ ] Jenkins
   + [ ] Gitlab CI
 - [ ] [Tìm hiểu và áp dụng Ansible cho test server](./docs/ansible/README.md)
