@@ -67,6 +67,6 @@ Configuration management
   + [ ] Prometheus
   + [ ] Grafana
   + [ ] Zabbix
-- [ ] ...
+- [ ] [AWS Labs](./docs/aws-labs/README.md)
 
 Happy learning!
