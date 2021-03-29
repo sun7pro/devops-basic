@@ -13,7 +13,7 @@
   + [ ] PHP appilcation
   + [ ] NodeJs application
   + [ ] <strong>[Tool]</strong>: Rocketeer
-  + [ ] <strong>[Tool]</strong>: Deployer
+  + [x] <strong>[Tool]</strong>: Deployer
 - [ ] [Áp dụng CI, CW notification](./docs/cicd/README.md)
   + [x] [CircleCI](./docs/cicd/circle-ci/README.md)
   + [ ] Github Action
